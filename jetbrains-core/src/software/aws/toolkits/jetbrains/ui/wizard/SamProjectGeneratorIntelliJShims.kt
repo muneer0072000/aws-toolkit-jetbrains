@@ -18,8 +18,8 @@ import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.platform.ProjectTemplatesFactory
 import icons.AwsIcons
 import software.aws.toolkits.jetbrains.services.lambda.RuntimeGroup
-import software.aws.toolkits.jetbrains.services.lambda.sam.SamCommon
 import software.aws.toolkits.jetbrains.services.lambda.runtimeGroup
+import software.aws.toolkits.jetbrains.services.lambda.sam.SamCommon
 import software.aws.toolkits.resources.message
 
 // Meshing of two worlds. IntelliJ wants validation errors to be thrown exceptions. Non-IntelliJ wants validation errors
@@ -59,7 +59,7 @@ class SamProjectBuilder(private val generator: SamProjectGenerator) : ModuleBuil
 
         SamCommon.excludeSamDirectory(outputDir, rootModel)
 
-        if (selectedRuntime.runtimeGroup == RuntimeGroup.PYTHON) {
+        if (selectedRuntime.runtimeGroup == RuntimeGroup.PYTHON || selectedRuntime.runtimeGroup == RuntimeGroup.NODEJS) {
             SamCommon.setSourceRoots(outputDir, project, rootModel)
         }
     }

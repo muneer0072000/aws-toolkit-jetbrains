@@ -7,6 +7,16 @@ static def ideProfiles() {
                                     "yaml",
                                     "PythonCore:2018.3.183.4284.148"
                             ]
+                    ],
+                    "IU": [
+                            version: "IU-2018.3.5",
+                            plugins: [
+                                    "yaml",
+                                    "JavaScriptLanguage",
+                                    "JavaScriptDebugger",
+                                    "CSS",
+                                    "PythonCore:2018.3.183.4284.148"
+                            ]
                     ]
             ],
             "2019.1": [
@@ -14,6 +24,16 @@ static def ideProfiles() {
                             version: "IC-191.5849.21", // TODO: Update to stable
                             plugins: [
                                     "yaml",
+                                    "PythonCore:2019.1.191.5849.16"
+                            ]
+                    ],
+                    "IU": [
+                            version: "IU-191.5849.21",
+                            plugins: [
+                                    "yaml",
+                                    "JavaScriptLanguage",
+                                    "JavaScriptDebugger",
+                                    "CSS",
                                     "PythonCore:2019.1.191.5849.16"
                             ]
                     ]
